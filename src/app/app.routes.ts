@@ -6,14 +6,18 @@ import { CompletedTasksComponent } from './components/pages/completed-tasks/comp
 export const routes: Routes = [
     {
         path:"",
-        component: AllTaskComponent
+        component: AllTaskComponent,
+        pathMatch: 'full',
     },
     {
         path:"importants",
-        component: ImportantTasksComponent
+        component: ImportantTasksComponent,
+        
     },
     {
         path:"completed",
         component: CompletedTasksComponent
     },
 ];
+
+
