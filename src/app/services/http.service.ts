@@ -14,4 +14,7 @@ export class HttpService {
       title:task
     })
   }
+  getAllTask(){
+    return this.httpClient.get("http://localhost:3000/task");
+  }
 }

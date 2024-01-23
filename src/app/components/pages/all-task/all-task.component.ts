@@ -10,13 +10,24 @@ import { HttpService } from '../../../services/http.service';
   styleUrl: './all-task.component.scss'
 })
 export class AllTaskComponent {
-  newTask=""
+  newTask="";
+  taskList: any[] = [];
   httpService = inject(HttpService);
+  ngOnInit(){
+    this.getAllTask();
+  }
   addTask(){
     console.log('addTask',this.newTask);
     this.httpService.addTask(this.newTask).subscribe(()=>{
-      this.newTask=""
+      this.newTask="";
+      this.getAllTask();
     })
-    
+  }
+  getAllTask(){
+    this.httpService.getAllTask().subscribe((result: any) =>{
+      console.log(result);
+      this.taskList = result;
+      
+    } )
   }
 }
