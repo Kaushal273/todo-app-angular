@@ -33,4 +33,21 @@ export class AllTaskComponent {
       
     } )
   }
+  onComplete(task:any){
+    task.complete = true;
+    console.log(`complete task: ${task}`);
+    this.httpService.updateTask(task).subscribe(()=>{
+      this.getAllTask();
+    })
+    
+  }
+
+  onImportant(task:any){
+    task.important = true;
+    console.log(`important task: ${JSON.stringify(task,null,2)}`);
+    this.httpService.updateTask(task).subscribe(()=>{
+      this.getAllTask();
+    })
+    
+  }
 }

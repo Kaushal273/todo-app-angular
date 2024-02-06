@@ -2,27 +2,36 @@
   "task": [
     {
       "id": "1",
-      "title": "angular"
+      "title": "angular",
+      "important": true,
+      "complete": true
     },
     {
       "id": "3944",
-      "title": "hello"
+      "title": "hello",
+      "important": true,
+      "complete": true
     },
     {
       "id": "4ea2",
-      "title": "ayyo man"
+      "title": "ayyo man",
+      "important": true
     },
     {
       "id": "335a",
-      "title": "heloo"
+      "title": "heloo",
+      "important": true
     },
     {
       "id": "f39e",
-      "title": "hello"
+      "title": "hello",
+      "important": true,
+      "complete": true
     },
     {
       "id": "5203",
-      "title": "hey"
+      "title": "hey",
+      "important": true
     }
   ]
 }
